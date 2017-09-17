@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-
+/** A super lame component description */
 function HelloWorld({message}){
     return <div>Hello {message}</div>
 }
