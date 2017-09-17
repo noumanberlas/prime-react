@@ -7,7 +7,12 @@ function HelloWorld({message}){
 }
 
 HelloWorld.propTypes = {
+    /** Message to display */
     message : PropTypes.string
+}
+
+HelloWorld.defaultProps = {
+    message :'World'
 }
 
 export default HelloWorld;
