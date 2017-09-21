@@ -7,5 +7,5 @@ A library of react components.
 npm install prime-react
 ```
 
-#Docs
+# Docs
 [Component Documentation] (https://noumanberlas.github.io/prime-react/)
