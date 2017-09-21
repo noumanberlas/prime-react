@@ -8,4 +8,4 @@ npm install prime-react
 ```
 
 # Docs
-[Component Documentation] (https://noumanberlas.github.io/prime-react/)
+[Component Documentation](https://noumanberlas.github.io/prime-react/)
