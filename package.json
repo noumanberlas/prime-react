@@ -1,5 +1,5 @@
 {
-  "name": "prime-react",
+  "name": "prime-react-build-template",
   "version": "0.1.0",
   "main":"./lib/index.js",
   "engines":{
@@ -16,8 +16,9 @@
     "react",
     "toolkit",
     "react-component"
-  ],
-  "private": false,
+  ],  
+  "//":" dont run npm publish from main root..instead it should be run from .\\lib ", 
+  "private": true,  
   "dependencies": {
     "react": "^15.6.1",
     "react-dom": "^15.6.1",
@@ -38,7 +39,9 @@
     "build:css":"cpx \"./src/components/**/*.css\" ./lib",
     "build:commonjs":"cross-env NODE_ENV=production babel ./src/components --out-dir ./lib --ignore spec.js",
     "prebuild:lib":"rimraf lib",
-    "build:lib":"npm run build:commonjs && npm run build:css",
+    "build:lib":"npm-run-all --parallel build:commonjs build:css build:copy-files",
+    "build:copy-files": "node scripts/copyBuildFiles.js",
+    "//":"below is irrelevant",
     "prepublish": "npm run build:lib"
   },
   "jest": {
